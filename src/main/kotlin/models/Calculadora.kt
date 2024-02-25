@@ -69,7 +69,8 @@ class Calculadora {
         do {
             println("Introdueix un caracter valid")
             try {
-                charOp = scan.next().single()
+                val input:String = scan.next()
+                if (input.length == 1) charOp = input.single()
                 when (charOp) {
                      '+','-','*','/','Z' -> {
                         dadesOk = true
